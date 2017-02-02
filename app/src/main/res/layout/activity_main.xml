@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/baseView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="false"
+        android:id="@+id/scrollView"
+        android:overScrollMode="always"
+        android:animateLayoutChanges="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/rowContainer"
+            android:orientation="vertical"
+            android:fadeScrollbars="true"
+            android:isScrollContainer="true"
+            android:nestedScrollingEnabled="false"
+            android:scrollbars="vertical"
+            android:verticalScrollbarPosition="defaultPosition"
+            android:overScrollMode="always"
+            android:animateLayoutChanges="true">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/row1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layoutMode="opticalBounds"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:id="@+id/count1"
+                    android:layout_weight="0.75"
+                    android:text="@string/default_item_num"
+                    android:gravity="start"
+                    android:nextFocusForward="@+id/list1"/>
+
+                <EditText
+                    android:id="@+id/list1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/product_message"
+                    android:layout_weight="5"
+                    android:inputType="textCapWords|textCapSentences|textAutoComplete"
+                    android:nextFocusForward="@+id/price1"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"
+                    android:id="@+id/price1"
+                    android:hint="@string/price_message"
+                    android:layout_weight="1.25"
+                    android:gravity="start" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/conclusionBar"
+        android:layout_weight="0"
+        android:animateLayoutChanges="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout_button_text"
+            android:id="@+id/button"
+            android:layout_weight="0.80"
+            android:onClick="makeRow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalPrice"
+            android:layout_weight="0"
+            android:layout_marginRight="8dp"
+            android:textSize="16sp"
+            android:hint="Total" />
+    </LinearLayout>
+
+</LinearLayout>

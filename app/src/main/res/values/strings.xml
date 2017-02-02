@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">One Stop</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="edit_message">Enter a message</string>
+    <string name="button_send">Send</string>
+    <string name="title_activity_display_message">My Message</string>
+    <string name="product_message">Enter an item</string>
+    <string name="price_message">Price</string>
+    <string name="default_item_num">1</string>
+    <string name="checkout_button_text">Checkout</string>
+    <string name="add_row">Add an additional row</string>
+</resources>
